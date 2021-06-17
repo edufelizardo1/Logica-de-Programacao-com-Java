@@ -14,5 +14,7 @@ public class NomeSobrenome {
 		String sobrenome = sc.nextLine();
 		
 		System.out.println("Seu nome completo é " + nome + " " + sobrenome);
+		
+		sc.close();
 	}
 }
