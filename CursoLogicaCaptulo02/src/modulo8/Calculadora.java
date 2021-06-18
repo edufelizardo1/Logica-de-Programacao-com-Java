@@ -7,20 +7,36 @@ public class Calculadora {
 
 		Scanner sc = new Scanner(System.in);
 
+		/*Entra com dados para a opeação*/
 		System.out.print("Enter com o primeiro número: ");
 		double p = sc.nextDouble();
 
 		System.out.print("Enter com o segundo número: ");
 		double s = sc.nextDouble();
+		
+		/*Apresenta as opções*/
+		lista();
+		
+		int i = sc.nextInt();
+		
+		/*Chama o método de chaves*/
+		chave(i, p, s);
 
+		sc.close();
+	}
+	
+	/*Opções*/
+	static void lista() {
 		System.out.println();
 		System.out.println("Escolha a operação:");
 		System.out.println("1-Soma:");
 		System.out.println("2-Subtração:");
 		System.out.println("3-Divisão:");
 		System.out.println("4-Multiplicação:");
-		int i = sc.nextInt();
+	}
 
+	/*Chaves*/
+	static void chave(int i, double p, double s) {
 		switch (i) {
 		case 1:
 			System.out.println("Resutado: " + getSoma(p, s));
@@ -38,32 +54,34 @@ public class Calculadora {
 			System.out.println("Escolha uma opção valida.");
 			break;
 		}
-
-		sc.close();
 	}
-
+	
+	/*Soma*/
 	static double getSoma(double p, double s) {
 		double soma = p + s;
 
 		return soma;
 	}
 
+	/*Subtração*/
 	static double getSubtracao(double p, double s) {
-		double soma = p - s;
+		double subtracao = p - s;
 
-		return soma;
+		return subtracao;
 	}
 
+	/*Divisão*/
 	static double getDivisao(double p, double s) {
-		double soma = p / s;
+		double divisao = p / s;
 
-		return soma;
+		return divisao;
 	}
 
+	/*Multiplicação*/
 	static double getMultiplicacao(double p, double s) {
-		double soma = p * s;
+		double multiplicacao = p * s;
 
-		return soma;
+		return multiplicacao;
 	}
 
 }
